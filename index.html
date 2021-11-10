@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
@@ -224,12 +225,28 @@
                     </ul>
                     <ul class="navbar__list-icon">
                         <li class="navbar__item-icon">
-                            <a href="" class="navbar__item-icon-link">
+                            <a href="javascript:void(0)" class="navbar__item-icon-link navbar__item-search">
                                 <svg class="navbar__item-img svg-icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
                                 <path d="M10,2C4.5,2,0,6.5,0,12s4.5,10,10,10s10-4.5,10-10S15.5,2,10,2z M10,19c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S13.9,19,10,19z"></path>
                                 <rect x="17" y="17" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.2844 19.5856)" width="4" height="8"></rect>
                             </svg>
                             </a>
+                            <div class="search-header__dropdown">
+                                <span class="box-triangle">
+                                    <svg viewBox="0 0 20 9" role="presentation">
+                                        <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
+                                    </svg>
+                                </span>
+                                <div class="search-header__dropdown-content">
+                                    <p class="search-header__dropdown-title">TÌM KIẾM</p>
+                                    <div class="search-header__dropdown-box-search">
+                                        <input type="text" class="search-header__input" placeholder="Tìm kiếm sản phẩm">
+                                        <button class="btn search-header__dropdown-btn">
+                                            <svg version="1.1" class="search-header__dropdown-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve"><path d="M10,2C4.5,2,0,6.5,0,12s4.5,10,10,10s10-4.5,10-10S15.5,2,10,2z M10,19c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S13.9,19,10,19z"></path><rect x="17" y="17" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.2844 19.5856)" width="4" height="8"></rect></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="navbar__item-icon">
                             <a href="" class="navbar__item-icon-link">
@@ -260,6 +277,44 @@
             </div>
         </header>
     </div>
+    <script>
+        var searchIcon = document.querySelector('.navbar__item-search');
+        var bodyElement = document.body;
+        var dropdownSearch = document.querySelector('.search-header__dropdown');
+        var btnSearch = document.querySelector('.search-header__dropdown-btn');
+        var isShowSearchIcon = false;
+        searchIcon.addEventListener('click', (e) => {
+            handleSearchBox()
+            e.stopPropagation();
+        });
+        dropdownSearch.addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
+        btnSearch.addEventListener('click', hiddenSearchBox);
+
+        function handleSearchBox() {
+
+            isShowSearchIcon = !isShowSearchIcon;
+            if (isShowSearchIcon) {
+                console.log('Turn on search box');
+                searchIcon.classList.add('show-box-search')
+                bodyElement.addEventListener('click', hiddenSearchBox);
+            } else {
+                console.log('Turn off search box');
+                searchIcon.classList.remove('show-box-search');
+                bodyElement.removeEventListener('click', hiddenSearchBox);
+            }
+        }
+
+        function hiddenSearchBox() {
+            console.log('Turn off search box');
+            if (isShowSearchIcon) {
+                searchIcon.classList.remove('show-box-search');
+                isShowSearchIcon = !isShowSearchIcon;
+                bodyElement.removeEventListener('click', hiddenSearchBox);
+            }
+        }
+    </script>
 </body>
 
 </html>
