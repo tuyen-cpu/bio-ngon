@@ -265,29 +265,72 @@
                                     </svg>
                                 </span>
                                 <div class="header__dropdown-content">
-                                    <header class="user-header__dropdown-header">
-                                        <h2 class="user-header__title">ĐĂNG NHẬP TÀI KHOẢN</h2>
-                                        <p class="user-header__content-title">Nhập email và mật khẩu của bạn:</p>
-                                    </header>
-                                    <div class="user-header__dropdown-box-user">
-                                        <form class="header-form">
-                                            <div class="header-form__group">
-                                                <input required id="header-form__input-email" type="text" class="header-form__input">
-                                                <label for="header-form__input-email" class="header-form__label">Nhập email hoặc số điện thoại</label>
+                                    <div class="header__dropdown-site-option">
+                                        <div class="header__dropdown-site header__site-login header__dropdown-site--isSelected ">
+                                            <header class="user-header__dropdown-header">
+                                                <h2 class="user-header__title">ĐĂNG NHẬP TÀI KHOẢN</h2>
+                                                <p class="user-header__content-title">Nhập email và mật khẩu của bạn:</p>
+                                            </header>
+                                            <div class="user-header__dropdown-box-user">
+                                                <form class="header-form">
+                                                    <div class="header-form__group">
+                                                        <input required id="header-form__input-email" type="text" class="header-form__input">
+                                                        <label for="header-form__input-email" class="header-form__label">Nhập email hoặc số điện thoại</label>
+                                                    </div>
+                                                    <div class="header-form__group">
+                                                        <input required id="header-form__input-passwd" type="password" class="header-form__input">
+                                                        <label for="header-form__input-passwd" class="header-form__label">Mật khẩu</label>
+                                                    </div>
+                                                    <button type="submit" class="btn btn--full header-form-btn">Đăng nhập</button>
+                                                </form>
+                                                <div class="user-header__option">
+                                                    <p class="user-header__option-item">Khách hàng mới?
+                                                        <a href="" class="user-header__option-link">Tạo tài khoản</a>
+                                                    </p>
+                                                    <p class="user-header__option-item">Quên mật khẩu?
+                                                        <a href="javascript:void(0)" class="user-header__option-link user-header__option-link-forgot">Khôi phục mật khẩu</a>
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="header-form__group">
-                                                <input required id="header-form__input-passwd" type="password" class="header-form__input">
-                                                <label for="header-form__input-passwd" class="header-form__label">Mật khẩu</label>
+                                        </div>
+                                        <div class="header__dropdown-site header__site-forgot">
+                                            <header class="user-header__dropdown-header">
+                                                <h2 class="user-header__title">Khôi phục mật khẩu</h2>
+                                            </header>
+                                            <div class="dropdown__option-list">
+                                                <div class="dropdown__option-item">
+                                                    <input id="dropdown__check-email" onchange="checkForgotBox(this)" name="header-forgot" class="dropdown__option-radio" type="radio" checked>
+                                                    <label for="dropdown__check-email" class="dropdown__option-label">Khôi phục bằng email</label>
+                                                </div>
+                                                <div class="dropdown__option-item">
+                                                    <input id="dropdown__check-phone" onchange="checkForgotBox(this)" name="header-forgot" class="dropdown__option-radio" type="radio">
+                                                    <label for="dropdown__check-phone" class="dropdown__option-label">Khôi phục bằng số điện thoại</label>
+                                                </div>
                                             </div>
-                                            <button type="submit" class="btn btn--full header-form-btn">Đăng nhập</button>
-                                        </form>
-                                        <div class="user-header__option">
-                                            <p class="user-header__option-item">Khách hàng mới?
-                                                <a href="" class="user-header__option-link">Tạo tài khoản</a>
-                                            </p>
-                                            <p class="user-header__option-item">Quên mật khẩu?
-                                                <a href="" class="user-header__option-link">Khôi phục mật khẩu</a>
-                                            </p>
+                                            <div class="user-header__dropdown-box-user">
+                                                <form class="header-form-forgot form-forgot-email is-show">
+                                                    <div class="header-form__group">
+                                                        <input required id="header-form__input-forgot-email" type="text" class="header-form__input">
+                                                        <label for="header-form__input-forgot-email" class="header-form__label">Email</label>
+                                                    </div>
+                                                    <p class="header-form__description">Email sẽ được gửi về email của quý khách sau khi khôi phục email</p>
+                                                    <button type="submit" class="btn btn--full header-form-btn btn-form-forgot">Khôi phục</button>
+                                                </form>
+                                                <form class="header-form-forgot form-forgot-phone">
+                                                    <div class="header-form__group">
+                                                        <input required id="header-form__input-forgot-email" type="text" class="header-form__input">
+                                                        <label for="header-form__input-forgot-email" class="header-form__label">Nhập số điện thoại</label>
+                                                    </div>
+                                                    <p class="header-form__description">Mã xác nhận sẽ được gửi về sdt của quý khách sau khi ấn gửi</p>
+                                                    <button type="submit" class="btn btn--full header-form-btn btn-form-forgot">Gửi mã xác nhận</button>
+                                                </form>
+                                                <div class="user-header__option">
+                                                    <p class="user-header__option-item">Đã nhớ mật khẩu?
+                                                        <a href="javascript:void(0)" class="user-header__option-link user-header__option-link-back-to-login">Trở về đăng nhập</a>
+                                                    </p>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -312,14 +355,12 @@
         </header>
     </div>
     <script>
-        // var iconActionList = document.querySelectorAll('.navbar__item-icon-link');
+        /*controls show box navbar*/
         var iconSearch = document.querySelector('.navbar__item-search');
         var iconUser = document.querySelector('.navbar__item-user');
         var bodyElement = document.body;
-        // var dropdownBoxList = document.querySelectorAll('.header__dropdown');
         var dropdownSearch = document.querySelector('.search-header__dropdown');
         var dropdownUser = document.querySelector('.use-header__dropdown');
-
         var btnSearch = document.querySelector('.search-header__dropdown-btn');
         var isShowSearchBox = false;
         var isShowUserBox = false;
@@ -365,6 +406,46 @@
                 iconUser.classList.remove('dropdown--show');
                 bodyElement.removeEventListener('click', handleUserBox);
             }
+        }
+
+
+
+        /*box user controls header__dropdown-site--isSelected */
+        var linkToForgot = document.querySelector('.user-header__option-link-forgot');
+        var linkToLogin = document.querySelector('.user-header__option-link-back-to-login');
+        var boxForgot = document.querySelector('.header__site-forgot');
+        var boxLogin = document.querySelector('.header__site-login');
+        var headerDropdownSiteOption = document.querySelector('.header__dropdown-site-option')
+        linkToForgot.addEventListener('click', directToForgotBox);
+        linkToLogin.addEventListener('click', directToLoginBox);
+
+        function directToForgotBox() {
+            console.log('switch forgot box')
+            boxForgot.classList.add('header__dropdown-site--isSelected');
+            boxLogin.classList.remove('header__dropdown-site--isSelected');
+            headerDropdownSiteOption.style.height = '255px'
+        }
+
+        function directToLoginBox() {
+            console.log('switch to login box')
+            boxLogin.classList.add('header__dropdown-site--isSelected');
+            boxForgot.classList.remove('header__dropdown-site--isSelected');
+            headerDropdownSiteOption.style.height = '267px'
+
+        }
+
+        /*Switch forgot phone or email*/
+        var dropdownCheckedForgotList = document.querySelectorAll('.dropdown__option-radio');
+        var formForgotList = document.querySelectorAll('.header-form-forgot');
+
+        function checkForgotBox(e) {
+            dropdownCheckedForgotList.forEach((element, index) => {
+                if (e === element) {
+                    formForgotList[index].classList.add('is-show');
+                } else {
+                    formForgotList[index].classList.remove('is-show');
+                }
+            });
         }
     </script>
 </body>
