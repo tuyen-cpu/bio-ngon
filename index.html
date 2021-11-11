@@ -231,13 +231,13 @@
                                 <rect x="17" y="17" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -9.2844 19.5856)" width="4" height="8"></rect>
                             </svg>
                             </a>
-                            <div class="search-header__dropdown">
+                            <div class="header__dropdown search-header__dropdown">
                                 <span class="box-triangle">
                                     <svg viewBox="0 0 20 9" role="presentation">
                                         <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
                                     </svg>
                                 </span>
-                                <div class="search-header__dropdown-content">
+                                <div class="header__dropdown-content">
                                     <p class="search-header__dropdown-title">TÌM KIẾM</p>
                                     <div class="search-header__dropdown-box-search">
                                         <input type="text" class="search-header__input" placeholder="Tìm kiếm sản phẩm">
@@ -249,7 +249,7 @@
                             </div>
                         </li>
                         <li class="navbar__item-icon">
-                            <a href="" class="navbar__item-icon-link">
+                            <a href="javascript:void(0)" class="navbar__item-icon-link navbar__item-user">
                                 <svg class="navbar__item-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
                                 <g><g id="account-circle">
                                     <path d="M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M255,76.5
@@ -258,6 +258,40 @@
                                     </g></g>
                             </svg>
                             </a>
+                            <div class="header__dropdown use-header__dropdown">
+                                <span class="box-triangle">
+                                    <svg viewBox="0 0 20 9" role="presentation">
+                                        <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
+                                    </svg>
+                                </span>
+                                <div class="header__dropdown-content">
+                                    <header class="user-header__dropdown-header">
+                                        <h2 class="user-header__title">ĐĂNG NHẬP TÀI KHOẢN</h2>
+                                        <p class="user-header__content-title">Nhập email và mật khẩu của bạn:</p>
+                                    </header>
+                                    <div class="user-header__dropdown-box-user">
+                                        <form class="header-form">
+                                            <div class="header-form__group">
+                                                <input required id="header-form__input-email" type="text" class="header-form__input">
+                                                <label for="header-form__input-email" class="header-form__label">Nhập email hoặc số điện thoại</label>
+                                            </div>
+                                            <div class="header-form__group">
+                                                <input required id="header-form__input-passwd" type="password" class="header-form__input">
+                                                <label for="header-form__input-passwd" class="header-form__label">Mật khẩu</label>
+                                            </div>
+                                            <button type="submit" class="btn btn--full header-form-btn">Đăng nhập</button>
+                                        </form>
+                                        <div class="user-header__option">
+                                            <p class="user-header__option-item">Khách hàng mới?
+                                                <a href="" class="user-header__option-link">Tạo tài khoản</a>
+                                            </p>
+                                            <p class="user-header__option-item">Quên mật khẩu?
+                                                <a href="" class="user-header__option-link">Khôi phục mật khẩu</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="navbar__item-icon">
                             <a href="" class="navbar__item-icon-link">
@@ -278,40 +312,58 @@
         </header>
     </div>
     <script>
-        var searchIcon = document.querySelector('.navbar__item-search');
+        // var iconActionList = document.querySelectorAll('.navbar__item-icon-link');
+        var iconSearch = document.querySelector('.navbar__item-search');
+        var iconUser = document.querySelector('.navbar__item-user');
         var bodyElement = document.body;
+        // var dropdownBoxList = document.querySelectorAll('.header__dropdown');
         var dropdownSearch = document.querySelector('.search-header__dropdown');
+        var dropdownUser = document.querySelector('.use-header__dropdown');
+
         var btnSearch = document.querySelector('.search-header__dropdown-btn');
-        var isShowSearchIcon = false;
-        searchIcon.addEventListener('click', (e) => {
+        var isShowSearchBox = false;
+        var isShowUserBox = false;
+        iconSearch.addEventListener('click', (e) => {
             handleSearchBox()
+            e.stopPropagation();
+        });
+        iconUser.addEventListener('click', (e) => {
+            handleUserBox()
             e.stopPropagation();
         });
         dropdownSearch.addEventListener('click', (e) => {
             e.stopPropagation();
         })
-        btnSearch.addEventListener('click', hiddenSearchBox);
+        dropdownUser.addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
+        btnSearch.addEventListener('click', handleSearchBox);
 
         function handleSearchBox() {
-
-            isShowSearchIcon = !isShowSearchIcon;
-            if (isShowSearchIcon) {
+            isShowSearchBox = !isShowSearchBox;
+            if (isShowSearchBox) {
+                if (isShowUserBox) handleUserBox();
                 console.log('Turn on search box');
-                searchIcon.classList.add('show-box-search')
-                bodyElement.addEventListener('click', hiddenSearchBox);
+                iconSearch.classList.add('dropdown--show')
+                bodyElement.addEventListener('click', handleSearchBox);
             } else {
                 console.log('Turn off search box');
-                searchIcon.classList.remove('show-box-search');
-                bodyElement.removeEventListener('click', hiddenSearchBox);
+                iconSearch.classList.remove('dropdown--show');
+                bodyElement.removeEventListener('click', handleSearchBox);
             }
         }
 
-        function hiddenSearchBox() {
-            console.log('Turn off search box');
-            if (isShowSearchIcon) {
-                searchIcon.classList.remove('show-box-search');
-                isShowSearchIcon = !isShowSearchIcon;
-                bodyElement.removeEventListener('click', hiddenSearchBox);
+        function handleUserBox() {
+            isShowUserBox = !isShowUserBox;
+            if (isShowUserBox) {
+                if (isShowSearchBox) handleSearchBox();
+                console.log('Turn on user box');
+                iconUser.classList.add('dropdown--show')
+                bodyElement.addEventListener('click', handleUserBox);
+            } else {
+                console.log('Turn off user box');
+                iconUser.classList.remove('dropdown--show');
+                bodyElement.removeEventListener('click', handleUserBox);
             }
         }
     </script>
