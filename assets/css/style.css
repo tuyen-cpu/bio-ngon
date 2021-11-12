@@ -356,16 +356,21 @@ html {
     border-bottom: 1px dotted #dfe0e1;
 }
 
-.search-header__result-item-link {}
+.search-header__result-item-link {
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+}
 
 .search-header__result-item-img {
-    width: 40px;
+    width: 100%;
 }
 
 .search-header__result-item-desc {
     flex: 1;
     padding-right: 5px;
     text-align: left;
+    overflow: hidden;
 }
 
 .search-header__result-item-title {
@@ -375,6 +380,9 @@ html {
     line-height: 2rem;
     margin-bottom: 4px;
     color: #252a2b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .search-header__result-item-price {
@@ -383,6 +391,19 @@ html {
     font-weight: 800;
     margin: 0;
     color: #575d5f;
+}
+
+.search-header__result-item-more-link {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #252a2b;
+    display: block;
+}
+
+.search-header__result-item-more-link:hover {
+    color: var(--primary-color);
 }
 
 .search-header__dropdown-btn {
