@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onclick="handleShowBoxHeader(this)">
     <div class="app">
         <header class="main-header">
             <div class="topbar">
@@ -224,7 +224,7 @@
                         </li>
                     </ul>
                     <ul class="navbar__list-icon">
-                        <li class="navbar__item-icon navbar__item-search">
+                        <li class="navbar__item-icon navbar__item-search" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
                             <a href="javascript:void(0)" class="navbar__item-icon-link">
                                 <svg class="navbar__item-img svg-icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
                                 <path d="M10,2C4.5,2,0,6.5,0,12s4.5,10,10,10s10-4.5,10-10S15.5,2,10,2z M10,19c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S13.9,19,10,19z"></path>
@@ -308,7 +308,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="navbar__item-icon navbar__item-user">
+                        <li class="navbar__item-icon navbar__item-user" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
                             <a href="javascript:void(0)" class="navbar__item-icon-link">
                                 <svg class="navbar__item-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
                                 <g><g id="account-circle">
@@ -316,7 +316,7 @@
                                                      c43.35,0,76.5,33.15,76.5,76.5s-33.15,76.5-76.5,76.5c-43.35,0-76.5-33.15-76.5-76.5S211.65,76.5,255,76.5z M255,438.6
                                                      c-63.75,0-119.85-33.149-153-81.6c0-51,102-79.05,153-79.05S408,306,408,357C374.85,405.45,318.75,438.6,255,438.6z"></path>
                                     </g></g>
-                            </svg>
+                                </svg>
                             </a>
                             <div class="header__dropdown use-header__dropdown">
                                 <span class="box-triangle">
@@ -396,18 +396,149 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="navbar__item-icon">
-                            <a href="" class="navbar__item-icon-link">
+                        <li class="navbar__item-icon navbar__item-cart" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
+                            <a href="javascript:void(0)" class="navbar__item-icon-link">
                                 <svg version="1.1" class="navbar__item-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
                                     <g><path d="M0,6v21h24V6H0z M22,25H2V8h20V25z"></path>
                                     </g>
                                     <g> <path d="M12,2c3,0,3,2.3,3,4h2c0-2.8-1-6-5-6S7,3.2,7,6h2C9,4.3,9,2,12,2z"></path>
                                     </g>
-                            </svg>
+                                </svg>
                                 <span class="count-holder">
                                     <span class="count">0</span>
                                 </span>
                             </a>
+                            <div class="header__dropdown cart-header__dropdown">
+                                <span class="box-triangle">
+                                    <svg viewBox="0 0 20 9" role="presentation">
+                                        <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
+                                    </svg>
+                                </span>
+                                <div class="header__dropdown-content">
+                                    <div class="cart-header__title">
+                                        <h3 class="cart-header__title-content">Giỏ hàng</h3>
+                                    </div>
+                                    <div class="cart-header__site-cart">
+                                        <ul class="cart-header__list-cart">
+                                            <li class="cart-header__item-cart">
+                                                <a href="" class="cart-header__box-img">
+                                                    <img class="cart-header__img" src="https://product.hstatic.net/200000271661/product/lo_xanh_baby_b2a57abe5e4f4c0ca44f55016026a2af_small.png" alt="">
+                                                </a>
+                                                <div class="cart-header__desc">
+                                                    <div class="cart-header__box-name">
+                                                        <div class="cart-header__name-brand">
+                                                            <a href="" class="cart-header__name">SÚP LƠ XANH BABY (GÓI 250G)</a>
+                                                            <span class="cart-header__brand">Bio Ngon</span>
+                                                        </div>
+
+                                                        <a href="" class="cart-header__remove-link">
+                                                            <svg class="cart-header__remove-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"> <g><path d="M500,442.7L79.3,22.6C63.4,6.7,37.7,6.7,21.9,22.5C6.1,38.3,6.1,64,22,79.9L442.6,500L22,920.1C6,936,6.1,961.6,21.9,977.5c15.8,15.8,41.6,15.8,57.4-0.1L500,557.3l420.7,420.1c16,15.9,41.6,15.9,57.4,0.1c15.8-15.8,15.8-41.5-0.1-57.4L557.4,500L978,79.9c16-15.9,15.9-41.5,0.1-57.4c-15.8-15.8-41.6-15.8-57.4,0.1L500,442.7L500,442.7z"></path></g> 
+                                                                </svg>
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="cart-header__quantity-price">
+                                                        <span class="cart-header__quantity">11</span>
+                                                        <span class="cart-header__price">40,000₫</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-header__item-cart">
+                                                <a href="" class="cart-header__box-img">
+                                                    <img class="cart-header__img" src="https://product.hstatic.net/200000271661/product/lo_xanh_baby_b2a57abe5e4f4c0ca44f55016026a2af_small.png" alt="">
+                                                </a>
+                                                <div class="cart-header__desc">
+                                                    <div class="cart-header__box-name">
+                                                        <div class="cart-header__name-brand">
+                                                            <a href="" class="cart-header__name">SÚP LƠ XANH BABY (GÓI 250G)</a>
+                                                            <span class="cart-header__brand">Bio Ngon</span>
+                                                        </div>
+
+                                                        <a href="" class="cart-header__remove-link">
+                                                            <svg class="cart-header__remove-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"> <g><path d="M500,442.7L79.3,22.6C63.4,6.7,37.7,6.7,21.9,22.5C6.1,38.3,6.1,64,22,79.9L442.6,500L22,920.1C6,936,6.1,961.6,21.9,977.5c15.8,15.8,41.6,15.8,57.4-0.1L500,557.3l420.7,420.1c16,15.9,41.6,15.9,57.4,0.1c15.8-15.8,15.8-41.5-0.1-57.4L557.4,500L978,79.9c16-15.9,15.9-41.5,0.1-57.4c-15.8-15.8-41.6-15.8-57.4,0.1L500,442.7L500,442.7z"></path></g> 
+                                                                </svg>
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="cart-header__quantity-price">
+                                                        <span class="cart-header__quantity">11</span>
+                                                        <span class="cart-header__price">40,000₫</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-header__item-cart">
+                                                <a href="" class="cart-header__box-img">
+                                                    <img class="cart-header__img" src="https://product.hstatic.net/200000271661/product/lo_xanh_baby_b2a57abe5e4f4c0ca44f55016026a2af_small.png" alt="">
+                                                </a>
+                                                <div class="cart-header__desc">
+                                                    <div class="cart-header__box-name">
+                                                        <div class="cart-header__name-brand">
+                                                            <a href="" class="cart-header__name">SÚP LƠ XANH BABY (GÓI 250G)</a>
+                                                            <span class="cart-header__brand">Bio Ngon</span>
+                                                        </div>
+
+                                                        <a href="" class="cart-header__remove-link">
+                                                            <svg class="cart-header__remove-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"> <g><path d="M500,442.7L79.3,22.6C63.4,6.7,37.7,6.7,21.9,22.5C6.1,38.3,6.1,64,22,79.9L442.6,500L22,920.1C6,936,6.1,961.6,21.9,977.5c15.8,15.8,41.6,15.8,57.4-0.1L500,557.3l420.7,420.1c16,15.9,41.6,15.9,57.4,0.1c15.8-15.8,15.8-41.5-0.1-57.4L557.4,500L978,79.9c16-15.9,15.9-41.5,0.1-57.4c-15.8-15.8-41.6-15.8-57.4,0.1L500,442.7L500,442.7z"></path></g> 
+                                                                </svg>
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="cart-header__quantity-price">
+                                                        <span class="cart-header__quantity">11</span>
+                                                        <span class="cart-header__price">40,000₫</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-header__item-cart">
+                                                <a href="" class="cart-header__box-img">
+                                                    <img class="cart-header__img" src="https://product.hstatic.net/200000271661/product/lo_xanh_baby_b2a57abe5e4f4c0ca44f55016026a2af_small.png" alt="">
+                                                </a>
+                                                <div class="cart-header__desc">
+                                                    <div class="cart-header__box-name">
+                                                        <div class="cart-header__name-brand">
+                                                            <a href="" class="cart-header__name">SÚP LƠ XANH BABY (GÓI 250G)</a>
+                                                            <span class="cart-header__brand">Bio Ngon</span>
+                                                        </div>
+
+                                                        <a href="" class="cart-header__remove-link">
+                                                            <svg class="cart-header__remove-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"> <g><path d="M500,442.7L79.3,22.6C63.4,6.7,37.7,6.7,21.9,22.5C6.1,38.3,6.1,64,22,79.9L442.6,500L22,920.1C6,936,6.1,961.6,21.9,977.5c15.8,15.8,41.6,15.8,57.4-0.1L500,557.3l420.7,420.1c16,15.9,41.6,15.9,57.4,0.1c15.8-15.8,15.8-41.5-0.1-57.4L557.4,500L978,79.9c16-15.9,15.9-41.5,0.1-57.4c-15.8-15.8-41.6-15.8-57.4,0.1L500,442.7L500,442.7z"></path></g> 
+                                                                </svg>
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="cart-header__quantity-price">
+                                                        <span class="cart-header__quantity">11</span>
+                                                        <span class="cart-header__price">40,000₫</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="cart-header__item-cart">
+                                                <a href="" class="cart-header__box-img">
+                                                    <img class="cart-header__img" src="https://product.hstatic.net/200000271661/product/lo_xanh_baby_b2a57abe5e4f4c0ca44f55016026a2af_small.png" alt="">
+                                                </a>
+                                                <div class="cart-header__desc">
+                                                    <div class="cart-header__box-name">
+                                                        <div class="cart-header__name-brand">
+                                                            <a href="" class="cart-header__name">SÚP LƠ XANH BABY (GÓI 250G)</a>
+                                                            <span class="cart-header__brand">Bio Ngon</span>
+                                                        </div>
+
+                                                        <a href="" class="cart-header__remove-link">
+                                                            <svg class="cart-header__remove-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"> <g><path d="M500,442.7L79.3,22.6C63.4,6.7,37.7,6.7,21.9,22.5C6.1,38.3,6.1,64,22,79.9L442.6,500L22,920.1C6,936,6.1,961.6,21.9,977.5c15.8,15.8,41.6,15.8,57.4-0.1L500,557.3l420.7,420.1c16,15.9,41.6,15.9,57.4,0.1c15.8-15.8,15.8-41.5-0.1-57.4L557.4,500L978,79.9c16-15.9,15.9-41.5,0.1-57.4c-15.8-15.8-41.6-15.8-57.4,0.1L500,442.7L500,442.7z"></path></g> 
+                                                                </svg>
+                                                        </a>
+
+                                                    </div>
+                                                    <div class="cart-header__quantity-price">
+                                                        <span class="cart-header__quantity">11</span>
+                                                        <span class="cart-header__price">40,000₫</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -418,56 +549,45 @@
         /*controls show box navbar*/
         var iconSearch = document.querySelector('.navbar__item-search');
         var iconUser = document.querySelector('.navbar__item-user');
+        var iconCart = document.querySelector('.navbar__item-cart');
+        var iconHeaderList = document.querySelectorAll('.navbar__item-icon');
         var bodyElement = document.body;
         var dropdownSearch = document.querySelector('.search-header__dropdown');
         var dropdownUser = document.querySelector('.use-header__dropdown');
+        var dropdownCart = document.querySelector('.cart-header__dropdown');
+        var dropdownBoxList = document.querySelectorAll('.navbar__item-icon ');
         var btnSearch = document.querySelector('.search-header__dropdown-btn');
         var isShowSearchBox = false;
         var isShowUserBox = false;
-        iconSearch.addEventListener('click', (e) => {
-            handleSearchBox()
-            e.stopPropagation();
-        });
-        iconUser.addEventListener('click', (e) => {
-            handleUserBox()
-            e.stopPropagation();
-        });
+
+        function handleShowBoxHeader(e) {
+            if (e === bodyElement) {
+                iconHeaderList.forEach((element, index) => {
+                    element.classList.remove('dropdown--show')
+                });
+            }
+            iconHeaderList.forEach((element, index) => {
+                if (e === element) {
+                    if (e.classList.contains('dropdown--show')) {
+                        e.classList.remove('dropdown--show');
+                    } else {
+                        e.classList.add('dropdown--show');
+                    }
+                } else {
+                    iconHeaderList[index].classList.remove('dropdown--show');
+                }
+            });
+        }
+
         dropdownSearch.addEventListener('click', (e) => {
             e.stopPropagation();
         })
         dropdownUser.addEventListener('click', (e) => {
-                e.stopPropagation();
-            })
-            // btnSearch.addEventListener('click', handleSearchBox);
-
-        function handleSearchBox() {
-            isShowSearchBox = !isShowSearchBox;
-            if (isShowSearchBox) {
-                if (isShowUserBox) handleUserBox();
-                console.log('Turn on search box');
-                iconSearch.classList.add('dropdown--show')
-                bodyElement.addEventListener('click', handleSearchBox);
-            } else {
-                console.log('Turn off search box');
-                iconSearch.classList.remove('dropdown--show');
-                bodyElement.removeEventListener('click', handleSearchBox);
-            }
-        }
-
-        function handleUserBox() {
-            isShowUserBox = !isShowUserBox;
-            if (isShowUserBox) {
-                if (isShowSearchBox) handleSearchBox();
-                console.log('Turn on user box');
-                iconUser.classList.add('dropdown--show')
-                bodyElement.addEventListener('click', handleUserBox);
-            } else {
-                console.log('Turn off user box');
-                iconUser.classList.remove('dropdown--show');
-                bodyElement.removeEventListener('click', handleUserBox)
-            }
-        }
-
+            e.stopPropagation();
+        })
+        dropdownCart.addEventListener('click', (e) => {
+            e.stopPropagation();
+        })
 
 
         /*box user controls header__dropdown-site--isSelected */

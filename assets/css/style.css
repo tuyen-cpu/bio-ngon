@@ -458,6 +458,145 @@ html {
     right: 70px;
 }
 
+.cart-header__dropdown .box-triangle {
+    right: 4px;
+}
+
+.cart-header__dropdown .header__dropdown-content {
+    width: 450px;
+}
+
+.cart-header__title {
+    background: #f3f5f6;
+    border: 1 px solid #e7ebec;
+    margin: 0 5px;
+}
+
+.cart-header__title-content {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000;
+    padding: 6px 10px;
+    margin: 0;
+    line-height: 2.1rem;
+    margin-bottom: 15px;
+}
+
+.cart-header__site-cart {}
+
+.cart-header__list-cart {
+    padding-left: 0;
+    list-style: none;
+    overflow-y: scroll;
+    max-height: 340px;
+}
+
+.cart-header__list-cart::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #e1e3e4;
+    box-shadow: inset 0 0 6px rgb(0, 0, 0, 30%);
+    -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0, 30%);
+}
+
+.cart-header__list-cart::-webkit-scrollbar-track {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.cart-header__list-cart::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+.cart-header__item-cart {
+    display: flex;
+    border-bottom: 1px dotted #bcbcbc;
+}
+
+.cart-header__box-img {
+    width: 65px;
+    height: 65px;
+    clear: both;
+    padding: 10px;
+    box-sizing: unset;
+}
+
+.cart-header__img {
+    width: 100%;
+    border: 1px solid #ededed;
+    box-sizing: border-box;
+}
+
+.cart-header__desc {
+    flex: 1;
+    padding: 10px;
+}
+
+.cart-header__box-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.cart-header__name-brand {
+    font-size: 1.2rem;
+}
+
+.cart-header__name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #252a2b;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+.cart-header__brand {
+    display: block;
+    text-align: left;
+    color: #677279;
+    line-height: 2.1rem;
+}
+
+.cart-header__remove {}
+
+.cart-header__remove-link {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #E7EBEC;
+    text-decoration: none;
+}
+
+.cart-header__remove-icon {
+    width: 8px;
+    fill: #000;
+}
+
+.cart-header__quantity-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header__quantity {
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    min-width: 25px;
+    background: #f5f5f5;
+    font-size: 1.3rem;
+    border-radius: 3px;
+}
+
+.cart-header__price {
+    font-size: 13px;
+    font-weight: 800;
+    color: #333;
+}
+
 .header-form__group {
     position: relative;
     margin-bottom: 12px;
