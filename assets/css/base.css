@@ -15,3 +15,51 @@
     display: block;
     width: 100%;
 }
+
+.btn-primary-hover {
+    z-index: 1;
+    position: relative;
+    --height-btn: 42px;
+    line-height: var(--height-btn);
+    height: var(--height-btn);
+    border: 1px solid var(--primary-color);
+    color: #fff;
+    border-radius: 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.btn-primary-hover:hover {
+    color: #252a2b;
+}
+
+.btn-primary-hover::before {
+    z-index: -1;
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    left: -1px;
+    z-index: -1;
+    background-color: var(--primary-color);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.btn-primary-hover:hover::before {
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
