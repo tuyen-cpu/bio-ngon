@@ -950,6 +950,7 @@ html {
     border-radius: 50%;
     border: 2px solid #fff;
     margin: 0 3px;
+    cursor: pointer;
 }
 
 .home-banner__icon-dot--active {
