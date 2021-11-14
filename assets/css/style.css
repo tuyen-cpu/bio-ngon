@@ -1,6 +1,7 @@
 :root {
     --primary-color: #66a55f;
     --header-height: 129px;
+    --top-bar-height: 29px;
 }
 
 * {
@@ -16,14 +17,59 @@ html {
     box-sizing: border-box;
 }
 
+.app {
+    position: relative;
+}
+
 .main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     -webkit-box-shadow: 0 0 2px rgb(0, 0, 0, 10%) inset;
     box-shadow: 0 0 2px rgb(0, 0, 0, 10%) inset;
+    background-color: #fff;
+    height: var(--header-height);
+}
+
+.sticky-header .topbar {
+    display: none;
+}
+
+.main-header.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    -webkit-box-shadow: 0 0 10px rgb(0, 0, 0, 20%);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 20%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    height: auto;
+}
+
+.sticky-header .navbar {
+    height: auto;
+}
+
+.sticky-header.main-header.sticky-header--show {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    transition: all 400ms ease;
+    visibility: visible;
+    opacity: 1;
 }
 
 .topbar {
     background-color: var(--primary-color);
     text-align: center;
+    height: var(--top-bar-height);
 }
 
 .topbar__title {
@@ -38,6 +84,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: calc(var(--header-height) - var(--top-bar-height));
 }
 
 .navbar__logo {
@@ -48,6 +95,10 @@ html {
 .navbar__logo-link {
     display: block;
     text-decoration: none;
+}
+
+.sticky-header .navbar__logo-img {
+    height: 42px;
 }
 
 .navbar__logo-img {
@@ -65,6 +116,7 @@ html {
     text-align: center;
     padding-left: 0;
     justify-content: center;
+    margin: 0;
 }
 
 .navbar__item {
@@ -74,6 +126,11 @@ html {
 
 .navbar__item:hover .navbar__item-link-icon {
     transform: rotate(180deg);
+}
+
+.sticky-header .navbar__item-link {
+    padding: 20px 0px;
+    color: var(--primary-color);
 }
 
 .navbar__item-link {
@@ -108,6 +165,25 @@ html {
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar__item--active .navbar__item-link {
+    opacity: 1;
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    border-bottom: 2px solid #000;
+}
+
+.sticky-header .navbar__item--active .navbar__item-link {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar__item--active .navbar__item-link:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar__item--active .navbar__item-link:hover::before {
+    border: none;
 }
 
 .navbar__item-link:hover {
@@ -151,6 +227,10 @@ html {
     display: block;
     cursor: pointer;
     text-decoration: none;
+}
+
+.sticky-header .navbar__item-icon .navbar__item-img {
+    fill: var(--primary-color);
 }
 
 .navbar__item-img {
@@ -286,6 +366,10 @@ html {
     100% {
         top: 2px
     }
+}
+
+.sticky-header .header__dropdown {
+    top: calc(100% + 2px);
 }
 
 .header__dropdown {
@@ -459,7 +543,7 @@ html {
 }
 
 .use-header__dropdown .box-triangle {
-    right: 70px;
+    right: 69px;
 }
 
 .cart-header__dropdown .box-triangle {
