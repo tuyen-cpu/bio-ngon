@@ -1025,3 +1025,41 @@ html {
     color: var(--primary-color);
     transition: opacity 150ms linear, color 150ms linear, background 150ms linear;
 }
+
+
+/* New product section */
+
+.new-product {
+    margin-bottom: 70px;
+}
+
+.new-product__title {
+    padding: 50px 0;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.new-product__link {
+    font-size: 3.7rem;
+    text-decoration: none;
+    color: #252a2b;
+    font-weight: 500;
+}
+
+.new-product__btn-more-container {
+    text-align: center;
+}
+
+.new-product__btn-more {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding: 10px 40px;
+    position: relative;
+    height: 39px;
+    line-height: 39px;
+    transition: 0.2s ease all;
+}
