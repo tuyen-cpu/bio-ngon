@@ -1051,6 +1051,7 @@ html {
 
 .new-product__btn-more-container {
     text-align: center;
+    margin-top: 20px;
 }
 
 .new-product__btn-more {
@@ -1129,6 +1130,10 @@ html {
 .policy-home__img {
     width: 40px;
     height: auto;
+}
+
+.policy-home__item:hover .policy-home__title {
+    text-decoration: underline;
 }
 
 .policy-home__title {
