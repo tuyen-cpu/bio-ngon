@@ -209,6 +209,7 @@ html {
     padding: 0 15px;
     display: flex;
     list-style: none;
+    margin: 0;
 }
 
 .navbar__item-icon {
@@ -241,6 +242,10 @@ html {
 .navbar__item-img {
     width: 22px;
     height: 40px;
+}
+
+.navbar__item-img-cart {
+    height: 38px;
 }
 
 .navbar__sub-menu-list {
@@ -320,7 +325,7 @@ html {
     position: absolute;
     left: 0;
     right: 0;
-    top: 13px;
+    top: 12px;
     overflow: hidden;
 }
 

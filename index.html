@@ -14,6 +14,7 @@
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
 </head>
 
@@ -25,6 +26,16 @@
             </div>
             <div class="grid wide">
                 <nav class="navbar">
+                    <div class="navbar__more">
+                        <div class="header-more">
+                            <span class="header-more__site">
+                                <a href="" class="header-more__link">
+                                    <i class="fal fa-bars header-more__icon">
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
                     <div class="navbar__logo">
                         <a href="" class="navbar__logo-link">
                             <img class="navbar__logo-img" itemprop="logo" src="./assets/img/logo.png" alt="Bio Ngon">
@@ -399,7 +410,7 @@
                         </li>
                         <li class="navbar__item-icon navbar__item-cart" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
                             <a href="javascript:void(0)" class="navbar__item-icon-link">
-                                <svg version="1.1" class="navbar__item-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
+                                <svg version="1.1" class="navbar__item-img navbar__item-img-cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
                                     <g><path d="M0,6v21h24V6H0z M22,25H2V8h20V25z"></path>
                                     </g>
                                     <g> <path d="M12,2c3,0,3,2.3,3,4h2c0-2.8-1-6-5-6S7,3.2,7,6h2C9,4.3,9,2,12,2z"></path>
