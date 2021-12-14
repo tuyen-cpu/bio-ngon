@@ -46,6 +46,21 @@
     .navbar__list-icon {
         padding: 0 9px 0 6px;
     }
+    .search-header {
+        display: block;
+    }
+    .sticky-header .navbar__logo {
+        display: none;
+    }
+    .sticky-header .search-header__result {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+    }
+    .search-header__result-list {
+        padding: 0 5px;
+    }
 }
 
 
@@ -76,5 +91,20 @@
     }
     .navbar__item-img {
         fill: var(--primary-color);
+    }
+    .search-header {
+        display: block;
+    }
+    .sticky-header .navbar__logo {
+        display: none;
+    }
+    .sticky-header .search-header__result {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+    }
+    .search-header__result-list {
+        padding: 0 5px;
     }
 }
