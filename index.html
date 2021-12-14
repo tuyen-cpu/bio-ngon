@@ -26,14 +26,81 @@
             </div>
             <div class="grid wide">
                 <nav class="navbar">
-                    <div class="navbar__more">
-                        <div class="header-more">
-                            <span class="header-more__site">
-                                <a href="" class="header-more__link">
-                                    <i class="fal fa-bars header-more__icon">
-                                    </i>
-                                </a>
-                            </span>
+                    <div class="navbar-more navbar__item-control" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
+                        <div class="navbar-more__container">
+                            <div class="header-more">
+                                <span class="header-more__site">
+                                    <a href="javascript:void(0)" class="header-more__link">
+                                        <i class="fal fa-bars header-more__icon">
+                                        </i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="navbar-more__dropdown">
+                                <span class="box-triangle">
+                                    <svg viewBox="0 0 20 9" role="presentation">
+                                        <path d="M.47108938 9c.2694725-.26871321.57077721-.56867841.90388257-.89986354C3.12384116 6.36134886 5.74788116 3.76338565 9.2467995.30653888c.4145057-.4095171 1.0844277-.40860098 1.4977971.00205122L19.4935156 9H.47108938z" fill="#ffffff"></path>
+                                    </svg>
+                                </span>
+                                <div class="navbar-more__content">
+                                    <div class="navbar-more__wrapper">
+                                        <ul class="navbar-more__list">
+                                            <li class="navbar-more__item">
+                                                <a href="" class="navbar-more__link">
+                                                    Trang chủ
+                                                </a>
+                                            </li>
+                                            <li class="navbar-more__item">
+                                                <a href="" class="navbar-more__link">
+                                                    Sản phẩm
+                                                    <i class="navbar-more__icon fa fa-chevron-right" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li class="navbar-more__item">
+                                                <a href="" class="navbar-more__link">
+                                                    Khuyến mãi
+                                                </a>
+                                            </li>
+                                            <li class="navbar-more__item">
+                                                <a href="" class="navbar-more__link">
+                                                   Góc chia sẻ
+                                                </a>
+                                            </li>
+                                            <li class="navbar-more__item">
+                                                <a href="" class="navbar-more__link">
+                                                    Về bio ngon
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="navbar-more__contact">
+                                            <div class="navbar-more__contact-container">
+                                                <p class="navbar-more__contact-title">Bạn cần hỗ trợ?
+                                                </p>
+                                                <div class="navbar-more__contact-wrapper">
+                                                    <svg class="navbar-more__contact-icon" viewBox="0 0 24 24" role="presentation">
+                                                    <g stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                                                        <path d="M17 15l-3 3-8-8 3-3-5-5-3 3c0 9.941 8.059 18 18 18l3-3-5-5z" stroke="#1e2d7d"></path>
+                                                        <path d="M14 1c4.971 0 9 4.029 9 9m-9-5c2.761 0 5 2.239 5 5" stroke="#00badb"></path>
+                                                    </g>
+                                                </svg>
+                                                    <a href="tel:0786416477" class="navbar-more__contact-link">Liên hệ: 0786416477</a>
+                                                </div>
+                                                <div class="navbar-more__contact-wrapper">
+                                                    <svg class="navbar-more__contact-icon" viewBox="0 0 22 22" role="presentation">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path stroke="#00badb" d="M.916667 10.08333367l3.66666667-2.65833334v4.65849997zm20.1666667 0L17.416667 7.42500033v4.65849997z"></path>
+                                                        <path stroke="#1e2d7d" stroke-width="2" d="M4.58333367 7.42500033L.916667 10.08333367V21.0833337h20.1666667V10.08333367L17.416667 7.42500033"></path>
+                                                        <path stroke="#1e2d7d" stroke-width="2" d="M4.58333367 12.1000003V.916667H17.416667v11.1833333m-16.5-2.01666663L21.0833337 21.0833337m0-11.00000003L11.0000003 15.5833337"></path>
+                                                        <path d="M8.25000033 5.50000033h5.49999997M8.25000033 9.166667h5.49999997" stroke="#00badb" stroke-width="2" stroke-linecap="square"></path>
+                                                    </g>
+                                                </svg>
+                                                    <a href="mailto:kinhdoanh@bio-ngon.com" class="navbar-more__contact-link">kinhdoanh@bio-ngon.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="navbar__logo">
@@ -236,7 +303,7 @@
                         </li>
                     </ul>
                     <ul class="navbar__list-icon">
-                        <li class="navbar__item-icon navbar__item-search" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
+                        <li class="navbar__item-icon navbar__item-control navbar__item-search" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
                             <a href="javascript:void(0)" class="navbar__item-icon-link">
                                 <svg class="navbar__item-img svg-icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
                                 <path d="M10,2C4.5,2,0,6.5,0,12s4.5,10,10,10s10-4.5,10-10S15.5,2,10,2z M10,19c-3.9,0-7-3.1-7-7s3.1-7,7-7s7,3.1,7,7S13.9,19,10,19z"></path>
@@ -320,7 +387,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="navbar__item-icon navbar__item-user" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
+                        <li class="navbar__item-icon navbar__item-control navbar__item-user" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
                             <a href="javascript:void(0)" class="navbar__item-icon-link">
                                 <svg class="navbar__item-img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
                                 <g><g id="account-circle">
@@ -408,7 +475,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="navbar__item-icon navbar__item-cart" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
+                        <li class="navbar__item-icon navbar__item-control navbar__item-cart" onclick="window.event.cancelBubble = true;handleShowBoxHeader(this)">
                             <a href="javascript:void(0)" class="navbar__item-icon-link">
                                 <svg version="1.1" class="navbar__item-img navbar__item-img-cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 27" style="enable-background:new 0 0 24 27;" xml:space="preserve">
                                     <g><path d="M0,6v21h24V6H0z M22,25H2V8h20V25z"></path>
@@ -1767,21 +1834,21 @@
         })
 
         /*controls show box navbar*/
-        var iconSearch = document.querySelector('.navbar__item-search');
-        var iconUser = document.querySelector('.navbar__item-user');
-        var iconCart = document.querySelector('.navbar__item-cart');
-        var iconHeaderList = document.querySelectorAll('.navbar__item-icon');
-        var bodyElement = document.body;
-        var dropdownSearch = document.querySelector('.search-header__dropdown');
-        var dropdownUser = document.querySelector('.use-header__dropdown');
-        var dropdownCart = document.querySelector('.cart-header__dropdown');
-        var dropdownBoxList = document.querySelectorAll('.navbar__item-icon ');
-        var btnSearch = document.querySelector('.search-header__dropdown-btn');
-        var isShowSearchBox = false;
-        var isShowUserBox = false;
+        const iconSearch = document.querySelector('.navbar__item-search');
+        const iconUser = document.querySelector('.navbar__item-user');
+        const iconCart = document.querySelector('.navbar__item-cart');
+        const iconHeaderList = document.querySelectorAll('.navbar__item-control');
+        const bodyElement = document.body;
+        const dropdownSearch = document.querySelector('.search-header__dropdown');
+        const dropdownUser = document.querySelector('.use-header__dropdown');
+        const dropdownCart = document.querySelector('.cart-header__dropdown');
+        const btnSearch = document.querySelector('.search-header__dropdown-btn');
+        const navbarMoreDropdown = document.querySelector('.navbar-more__dropdown')
+
 
 
         function handleShowBoxHeader(e) {
+            console.log(e)
             if (e === bodyElement) {
                 iconHeaderList.forEach((element, index) => {
                     element.classList.remove('dropdown--show')
