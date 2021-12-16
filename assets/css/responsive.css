@@ -109,4 +109,10 @@
     .main-header+.main-container {
         padding-top: calc(var(--top-bar-height) + 80px + 42px);
     }
+    .header__dropdown {
+        height: 83vh;
+        width: 100vw;
+        top: calc(100% + 19px);
+        /* bottom: 0; */
+    }
 }

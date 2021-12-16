@@ -148,7 +148,7 @@ html {
     padding: 15px 15px 15px 0px;
     margin-left: 15px;
     border-bottom: 1px solid #eeeeee;
-    color: #415255;
+    color: #252a2b;
 }
 
 .navbar-more__link:hover {
@@ -666,9 +666,13 @@ html {
     right: 24px;
 }
 
-.cart-header__dropdown .header__dropdown-content {
+.cart-header__dropdown {
     width: 450px;
     padding: 20px 0;
+}
+
+.cart-header__dropdown .header__dropdown-content {
+    padding: 0;
 }
 
 .cart-header__title {
