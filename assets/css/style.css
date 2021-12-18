@@ -1099,10 +1099,6 @@ html {
     vertical-align: middle;
 }
 
-.new-product__img {
-    vertical-align: middle;
-}
-
 .home-banner__nav-controls {}
 
 .home-banner__btn-control {
@@ -1604,4 +1600,8 @@ span {
 
 .footer-bottom__contact .contact-item-4 {
     background: rgba(0, 0, 0, 0) url(https://theme.hstatic.net/200000271661/1000739236/14/icon_footer_4.png?v=153) no-repeat scroll 0px 12px;
+}
+
+.footer-bottom__content {
+    overflow: hidden;
 }

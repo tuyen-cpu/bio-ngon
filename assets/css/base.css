@@ -92,6 +92,7 @@
 
 .product__cart-mobile-container {
     text-align: center;
+    display: none;
 }
 
 .product__btn-cart-mobile {

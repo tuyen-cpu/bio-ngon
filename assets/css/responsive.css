@@ -104,6 +104,57 @@
         opacity: 0;
         visibility: hidden;
     }
+    .product__cart-mobile-container {
+        display: block;
+    }
+    .policy-home__item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .home-information {
+        margin-top: 0;
+    }
+    .policy-home__container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .home-information {
+        padding: 0;
+    }
+    .home-information__banner {
+        position: relative;
+        height: 50vh;
+    }
+    .home-information__banner-content {
+        text-align: center;
+    }
+    .home-information__banner-btn {
+        margin-top: 33px;
+    }
+    .home-information__banner-title {
+        font-size: 4rem;
+    }
+    .home-information__banner-content {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .home-information__site-info {
+        padding: 50px 30px;
+        margin: 0;
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+    .top-footer__container {
+        padding: 0 15px;
+    }
+    .block-newsletter {
+        flex-flow: column;
+    }
+    .block-newsletter__title {
+        width: 100%;
+        margin-bottom: 20px;
+        padding-left: 12px;
+    }
 }
 
 

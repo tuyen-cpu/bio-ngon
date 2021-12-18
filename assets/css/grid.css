@@ -263,13 +263,13 @@
         margin-left: -5px;
         margin-right: -5px;
     }
-    .row.gutter-15 {
-        margin-left: -7.5px;
-        margin-right: -7.5px;
-    }
     .row.gutter-30 {
         margin-left: -15px;
         margin-right: -15px;
+    }
+    .row.gutter-15 {
+        margin-left: -7.5px;
+        margin-right: -7.5px;
     }
     .col {
         padding-left: 12px;
